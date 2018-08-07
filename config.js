@@ -84,7 +84,7 @@ config.iota = {
      * as a TimeInstant metadata to each attribute, with the current timestamp.
      */
     timestamp: true,
-    
+
     /**
      * Context Broker configuration. Defines the connection information to the instance of the Context Broker where
      * the IoT Agent will send the device data.
@@ -108,7 +108,7 @@ config.iota = {
         /**
          * Port where the IoT Agent will be listening for NGSI and Provisioning requests.
          */
-        port: 4061
+        port: 4041
     },
 
     /**
@@ -212,7 +212,7 @@ config.iota = {
      * URL Where the IoT Agent Will listen for incoming updateContext and queryContext requests (for commands and passive
      * attributes). This URL will be sent in the Context Registration requests.
      */
-    providerUrl: 'http://localhost:4061',
+    providerUrl: 'http://172.17.0.1:4041/v1',
 
     /**
      * Default maximum expire date for device registrations.
@@ -222,7 +222,12 @@ config.iota = {
     /**
      * Default type, for IoT Agent installations that won't require preregistration.
      */
-    defaultType: 'Thing'
+    defaultType: 'Thing',
+
+    /**
+     * Mini HTTP Server for iota process (Don't expose this port)
+     */
+    miniHTTPserverPort: '3001'
 };
 
 /**
