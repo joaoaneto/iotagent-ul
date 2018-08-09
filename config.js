@@ -230,7 +230,7 @@ config.iota = {
     miniHTTPserverPort: '3001',
 
     /**
-     * Mini HTTP Server for iota process (Don't expose this port)
+     * Socket.io websocket port
      */
     socketIOport: '8000'
 };
