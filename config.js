@@ -182,7 +182,7 @@ config.iota = {
         /**
          * Name of the Mongo database that will be created to store IoT Agent data.
          */
-        db: 'iotagentul'
+        db: 'iotagentulknot2'
 
         /**
          * Name of the set in case the Mongo database is configured as a Replica Set. Optional otherwise.
@@ -227,7 +227,12 @@ config.iota = {
     /**
      * Mini HTTP Server for iota process (Don't expose this port)
      */
-    miniHTTPserverPort: '3001'
+    miniHTTPserverPort: '3001',
+
+    /**
+     * Mini HTTP Server for iota process (Don't expose this port)
+     */
+    socketIOport: '8000'
 };
 
 /**
@@ -238,7 +243,7 @@ config.defaultKey = 'TEF';
 /**
  * Default transport protocol when no transport is provisioned through the Device Provisioning API.
  */
-config.defaultTransport = 'MQTT';
+config.defaultTransport = 'WS';
 
 module.exports = config;
 
