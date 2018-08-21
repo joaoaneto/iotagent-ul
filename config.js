@@ -241,6 +241,11 @@ config.iota = {
 config.defaultKey = 'TEF';
 
 /**
+ * APPEND BECAUSE OF UPDATE PROPERTIES
+ */
+config.appendMode = true;
+
+/**
  * Default transport protocol when no transport is provisioned through the Device Provisioning API.
  */
 config.defaultTransport = 'WS';
